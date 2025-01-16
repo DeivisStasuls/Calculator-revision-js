@@ -21,7 +21,12 @@
         const out=document.getElementById("rez");
         btn.addEventListener("click",clicks)
         function clicks(){
-            return calculate(,,);
+            let num1 = parseFloat(numbr1.value);
+            let opr = operat.value;
+            let num2 = parseFloat(numbr2.value);
+        
+            displayrez(calculate(num1,opr,num2));
+
         }
         function calculate(num1,op,num2){
             switch(op){
@@ -34,6 +39,9 @@
                 case"+" :
                 return num1+num2;
             }
+        }
+        function displayrez(num){
+            out.innerText = `Result:${num}`;
         }
     </script>
 </body>
