@@ -19,7 +19,22 @@
         const operat= document.getElementById("op");
         const numbr2= document.getElementById("num2");
         const out=document.getElementById("rez");
-        
+        btn.addEventListener("click",clicks)
+        function clicks(){
+            return calculate(,,);
+        }
+        function calculate(num1,op,num2){
+            switch(op){
+                case"/" :
+                return num1/num2;
+                case"*" :
+                return num1*num2;
+                case"-" :
+                return num1-num2;
+                case"+" :
+                return num1+num2;
+            }
+        }
     </script>
 </body>
 </html>
